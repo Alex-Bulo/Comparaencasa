@@ -1,0 +1,13 @@
+.FormContainer{
+    position: relative;
+
+    height: 50vh;
+    width: 100%;
+
+}
+.searchImg{
+    position: absolute;
+    top:0;
+    z-index: 1;
+    width: 100%;
+}
