@@ -8,11 +8,8 @@ let carsController = {
         const plate = req.params.id
         try {
             
-            const needForPlate = plate ? {carPlate: { [Op.eq]: plate }} : {}
-            
-            
             const carsInfo = await db.Cars.findOne({
-                where: needForPlate,
+                where: {carPlate: plate},
             })
 
             if (!carsInfo){
@@ -41,6 +38,46 @@ let carsController = {
         }    
         
     },
+ 
+    getUser: async (req,res) => {
+        const {id} = req.params
+        try {            
+            
+            const userInfo = await db.Users.findOne({
+                where: {id: id},
+                include:[{
+                    model:db.Cars, as:'car'}]
+            })
+
+            if (!userInfo){
+              throw new Error('User not found')
+            }
+            
+            
+            
+            res.status(200).json({
+                meta:{
+                    status:"success",
+                },
+                data: userInfo
+                
+                
+            })
+            
+        } catch (error) {
+            console.log(error.message);
+            res.status(500).json({
+                meta:{
+                    status:'unsuccesful'
+                },
+                data: error.message
+            })            
+        }    
+        
+    },
+
+   
+    
 
 }
 

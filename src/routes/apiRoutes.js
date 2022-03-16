@@ -6,4 +6,6 @@ const apiRouter = express.Router();
 
 apiRouter.get('/cars/:id', carsController.getCar)
 
+apiRouter.get('/users/:id', carsController.getUser)
+
 module.exports = apiRouter;
