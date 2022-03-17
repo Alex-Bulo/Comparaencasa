@@ -29,10 +29,10 @@ function FormContainer() {
     
                 if(response.status === 200 || response.status === 500){
                     const carsInfo = await response.json()
-                    // console.log(carsInfo.data);
-                    setResult(carsInfo.data)
                     
-                    // setLoading(false)
+                    setResult(carsInfo.data)
+                    console.log(response);
+                    
                 }else{
                     throw new Error(response.statusText)
                 }

@@ -18,6 +18,8 @@ function App() {
         
         <Route path='/profile/:id' element={<ProtectedRoute component={Profile} />}/>
 
+        <Route path='/404' element={<h4> Ups... something went wrong :(</h4>}/>
+
       </Routes>
     </div>
   );

@@ -1,10 +1,11 @@
 const db = require('../database/models');
+const {setCache} = require('../cache/redisCache')
 
 
 let carsController = {
     
-    getCar: async (req,res) => {
-        const plate = req.params.id
+    getCar: async (req,res,time) => {
+        const plate = req.params.plate
         try {
             
             const carsInfo = await db.Cars.findOne({
@@ -15,7 +16,7 @@ let carsController = {
               throw new Error('Plate not found')
             }
             
-            
+            setCache(plate,carsInfo)
             
             res.status(200).json({
                 meta:{

@@ -1,18 +1,21 @@
 const express = require('express')
-const path = require('path')
 const cors = require('cors')
+var responseTime = require('response-time')
 const apiRouter = require('./routes/apiRoutes')
-// const redis = require('redis');
+const {connectRedis} = require('./cache/redisCache')
+
+connectRedis()
 
 const app = express();
 app.use(express.json())
+
+app.use(responseTime( (req, res, time) => console.log(`Elapsed time: ${time}`) ) )
 
 const port = process.env.PORT || 3001
 
 app.use(cors({
     origin:'http://localhost:3000'
 }))
-// app.use(express.static(path.resolve(__dirname, './public')))
 
 app.listen(port, function(){
     console.log(`Servidor corriendo en ${port}`);
