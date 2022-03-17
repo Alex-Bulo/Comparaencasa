@@ -25,11 +25,11 @@ function FormContainer() {
             try {
                 const response = await fetch(`http://localhost:3001/cars/${userChoice}`)
                 
-                console.log(response);
+                // console.log(response);
     
                 if(response.status === 200 || response.status === 500){
                     const carsInfo = await response.json()
-                    console.log(carsInfo.data);
+                    // console.log(carsInfo.data);
                     setResult(carsInfo.data)
                     
                     // setLoading(false)
@@ -51,7 +51,7 @@ function FormContainer() {
         <main className="FormContainer">
             
             <Form submitHandler={submitHandler} userChoice={userChoice} changeHandler={changeHandler} result={result} loading={loading}/>
-            <img src={pic} alt='Search plates background image' className="searchImg"/>
+            <img src={pic} alt='Search plates background image' id='homePImg' className="searchImg"/>
 
         </main>
 

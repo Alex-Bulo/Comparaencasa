@@ -1,7 +1,7 @@
 .Form{
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 65%;
+    height: 60%;
 
     /* padding: 25px; */
 
@@ -20,7 +20,7 @@
 }
 
 .formTitle{
-    margin: 35px;
+    margin: 30px;
 
     color: #fff;
     font-size: 21px;

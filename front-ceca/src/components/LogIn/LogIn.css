@@ -1,0 +1,17 @@
+.logInLabel{
+    margin: 0 15px 30px 0;
+
+    color: #fff;
+}
+.lblTitle{
+    padding-left: 6px;
+    font-weight: 500;
+}
+
+#passInput,
+#mailInput{
+    width: 95%;
+}
+#loginBtn{
+    margin-left: 0;
+}

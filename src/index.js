@@ -5,6 +5,7 @@ const apiRouter = require('./routes/apiRoutes')
 // const redis = require('redis');
 
 const app = express();
+app.use(express.json())
 
 const port = process.env.PORT || 3001
 

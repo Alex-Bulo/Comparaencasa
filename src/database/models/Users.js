@@ -8,8 +8,9 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true
         },
 
-        name: {
+        mail: {
             type: DataTypes.STRING(50),
+            unique: true,
             allowNull: false
         },
 

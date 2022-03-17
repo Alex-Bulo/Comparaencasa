@@ -14,7 +14,7 @@ function Header() {
         <nav>
             <ul className='linksContainer'>
                 <li className='navBtn'> <Link to='/' className='link'>Home <i className="fa-solid fa-house homeIcn"></i> </Link> </li>
-                {/* <li className='navBtn'> <Link to='/logIn' className='link'>Log In <i className="fa-solid fa-user-large loginIcn"></i></Link></li> */}
+                <li className='navBtn'> <Link to='/login' className='link'>Log In <i className="fa-solid fa-user-large loginIcn"></i></Link></li>
             </ul>
         </nav>
     </header>

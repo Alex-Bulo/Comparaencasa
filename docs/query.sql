@@ -18,16 +18,16 @@ VALUES
 
 CREATE TABLE ceca_db.users (
 	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(50) NOT NULL,
-	`password` VARCHAR(10) NOT NULL,
+	`mail` VARCHAR(50) NOT NULL UNIQUE,
+	`password` VARCHAR(100) NOT NULL,
     `photo` VARCHAR(10) NOT NULL default 'user1.png',
     `id_car` INT(10) UNSIGNED NOT NULL,
 	PRIMARY KEY (`id`),
 	FOREIGN KEY (`id_car`) REFERENCES ceca_db.cars(`id`)
 );
 
-INSERT INTO ceca_db.users( name, password, id_car)
+INSERT INTO ceca_db.users( mail, password, id_car)
 VALUES 
-('Alejandro', 'holamundo', 2),
-('Foo', 'bar',4),
-('UserTest', 'testing', 5);
+('alejandro@user.com', 'holamundo', 2),
+('Foo@user.com', 'bar', 4),
+('UserTest@user.com', 'testing', 5);

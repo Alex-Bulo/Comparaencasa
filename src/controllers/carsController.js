@@ -1,5 +1,4 @@
 const db = require('../database/models');
-const { Op } = require('sequelize');
 
 
 let carsController = {
@@ -53,7 +52,7 @@ let carsController = {
               throw new Error('User not found')
             }
             
-            
+            delete userInfo['password']
             
             res.status(200).json({
                 meta:{

@@ -4,10 +4,17 @@
     height: 50vh;
     width: 100%;
 
+    overflow: hidden;
+
 }
 .searchImg{
+    width: 100%;
+
     position: absolute;
     top:0;
     z-index: 1;
-    width: 100%;
+}
+
+#homePImg{
+    transform: translateY(-45px);
 }
