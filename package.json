@@ -6,13 +6,14 @@
   "scripts": {
     "first": "npm install sequelize && node init",
     "server": "npm install && nodemon ./src/index.js",
-    "reactFront": "cd ./front-ceca && npm start",
+    "reactFront": "cd ./front-ceca && npm install && npm start",
     "start": "start npm run server && start npm run reactFront"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "express-validator": "^6.14.0",

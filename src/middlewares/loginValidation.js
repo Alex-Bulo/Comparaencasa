@@ -1,5 +1,5 @@
 const { body } = require('express-validator')
-// const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs')
 const db = require('../database/models')
 
 const loginValidation = [
@@ -22,8 +22,7 @@ const loginValidation = [
         })
 
         if (userFound){
-            const passOK = pass === userFound.password
-            // const passOK = bcrypt.compareSync(password, userFound.password)
+            const passOK = bcrypt.compareSync(pass, userFound.password)
 
             if (passOK){
                 return true
