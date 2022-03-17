@@ -26,7 +26,7 @@ function LogInContainer() {
         setLoading(true)
         
         logIn(userChoice.mail,userChoice.pass, {errors:setInputErrors,loading:setLoading})     
-
+        
     }
 
     return(          

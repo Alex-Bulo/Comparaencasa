@@ -26,7 +26,7 @@ function LogIn({data, submitHandler, changeHandler, loading, errors}) {
                     <button id='loginBtn' className="submitBtn" onClick={submitHandler}>LogIn</button>
                 
                  {loading && <p className='resultMsg'>Loading...</p>}
-                {errors && <ul className='resultMsg' style={{background:'#000'}}>
+                {errors && <ul className='resultMsg'>
 
                                     {errors.mail && <li><i className="fa-solid fa-car-crash resultIcn"></i> {errors.mail.msg}</li>}
                                     {errors.pass && <li><i className="fa-solid fa-car-crash resultIcn"></i> {errors.pass.msg}</li>}

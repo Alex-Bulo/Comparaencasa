@@ -36,6 +36,8 @@ export const AuthProvider = ( {children} ) => {
                 navigate('/profile/'+dbInfo.data.id)
             }else{
                 action.errors(dbInfo.data)                    
+
+                action.loading(false)
             }
             
         })
