@@ -64,7 +64,8 @@ let usersController = {
         //busca en base de datos el user con dicho mail
         const user = await db.Users.findOne({
             where: {mail},
-            attributes: ['id', 'mail', 'photo', 'idCar']
+            attributes: ['id','name', 'mail', 'photo'],
+            include:[{model:db.Cars, as:'car'}]
         });
         
         // req.session.logged = user;

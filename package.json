@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "first": "npm install sequelize && node init",
-    "start": "npm install && nodemon ./src/index.js "
+    "server": "npm install && nodemon ./src/index.js",
+    "reactFront": "cd ./front-ceca && npm start",
+    "start": "start npm run server && start npm run reactFront"
   },
   "author": "",
   "license": "ISC",
