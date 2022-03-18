@@ -13,10 +13,7 @@ const connectRedis = async ()=>{
 
 }
 
-const setCache = async(plate,car) => {
-    
-    // const client = await connectRedis()
-    
+const setCache = async(plate,car) => {   
     
     await redisClient.setex(plate, expTime, car);
     const value = await client.get('key');

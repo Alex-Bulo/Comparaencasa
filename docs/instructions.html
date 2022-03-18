@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0907)https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=bdd3844a7e&attid=0.1&permmsgid=msg-f:1727394604029476064&th=17f8f03d801a7ce0&view=att&disp=inline&realattid=f_l0siny4t0&ser=1&saddbat=ANGjdJ_pHZ2Wxn0itFA2DbhhualH_clDfjo96jROydhx_u_Fb8GO-EJZxd2jBKbgKt93bErfcoqJU_YE_oU8T2K9_kj_Qgux1Na6MAyxPSYcV2_3mhXHLUl4IBEUWyVWcYRoPCaa4oavwEASsGRBYpFErcK9f0bADhmyG4oShHmvl1IXn8zgmYPFMn34bDBbANKb_muWlVmBYQoZsbrwzk4AAeLqWc1qMKXa7wmnGItzJAotFkqDS_5JZAH2FxJclBjE0nx3RRbNXmDiSzzuFjT90_Eqwo9CRtvETeWA1zuISmPz0LOdFxXgzJkfHVuNqGLLsk74MpnJf4os9__A6T1NUNE3-gkbXsG3eA23AuASGKFJWBXJGnmULkbWA2xELdNzQeb8WRLBdA2LNNPIIt28T0hr24EW-K-3cAVnNTjxmnRIGzWzNIBRlt6LZk8_VWDIBjZRQQngPxX0uNZUhBNxJk7A9ie1TG91eDIcQstRjPgidG2OGmxhY54NiWsrXcy4g-tenEMV0W1GNJ54SSIrrJ6wpiim5zywbAOKQrUagKAwH0vXc14uSmw1hYYtY1pH2dKYdCH3FDQrIepiHDBdUcaGsSW1Np546xBw-bMUbeQ1Oyas5hR9yPv-0ck5DttoWX7yEqyw_Riwrm12WKaFRqo0znZ8Wuq_UBHa5uzsIX5DDZ1UlqbvmbIkwwg -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style></style></head><body cz-shortcut-listen="true"><u></u>
+
+
+
+  
+  
+  
+  
+
+
+<div class="m_stackedit">
+  <div class="m_stackedit__html"><h2 id="m_full-stack-dev-project">Full Stack Dev Project</h2>
+<p>We want to create a project that will use tools like Docker, Python, React and Mysql.</p>
+<p>The project exposed here can be done partially or with similar implementations, we are looking how you can find a way to resolve the main issue.</p>
+<p>We want to create an architecture composed with the following units:</p>
+<ul>
+<li>A database in MySql</li>
+<li>A python server in FastApi, flask or Django</li>
+<li>A python script that will write registers in the database. If you are working with Django it can be a Manage Script <a href="https://www.google.com/url?q=https://docs.djangoproject.com/es/4.0/howto/custom-management-commands/&amp;source=gmail-html&amp;ust=1647639636297000&amp;usg=AOvVaw3lttH1CpqadVCxtoyQ9Jh-" target="_blank" rel="noreferrer">https://docs.djangoproject.<wbr>com/es/4.0/howto/custom-<wbr>management-commands/</a></li>
+<li>A simple front end in react that will have a text field and a button.</li>
+</ul>
+<p>The idea of the app is a server that will take a car plate as a parameter and will return a car model associated with the plate.<br>
+With this project you will see the use of <code>docker, docker-compose, mysql, Django (flask or fastapi)</code>. Also it will be possible to see the inter connection between docker containers.</p>
+<p>The user should write a car plate in the frontend, the front should connect to the backend and ask for the car name.<br>
+The backend will check on the database and return a response. There is plus here if you can add a redis cache server in front of the database.</p>
+<h3 id="m_frontend-react-or-django-templates">Frontend (react or django templates)</h3>
+<p>Write a front app in react or django templates that will render an input with a button. The user will type a car plate, hit the button and receive the information from the backend.</p>
+<h3 id="m_backend-django-flask-or-fastapi">Backend (django, flask or fastapi)</h3>
+<p>Write a backend app that will be used as a connection between the frontend and the database.</p>
+<h3 id="m_mysql">Mysql</h3>
+<p>Create a database in mysql. It will have a table with 3 columns with (id, car name, car plate).<br>
+The idea is that every car plate in the database has a car name associated. We want to know the name of the car based on the plate.</p>
+<h3 id="m_docker">Docker</h3>
+<p>Use a docker instance for the frontend (probably a image with node, one for the backend (one with python 3.8) and one for the database (mysql 8).<br>
+Write a docker-compose file that will link all the containers. If it’s not possible possible to implement docker, explain how to install all the dependencies in order to run the app.</p>
+<h3 id="m_observations">Observations</h3>
+<ul>
+<li>Implement the code using the python style guide <a href="https://www.google.com/url?q=https://www.python.org/dev/peps/pep-0008/&amp;source=gmail-html&amp;ust=1647639636297000&amp;usg=AOvVaw1WxEx1lpxuDoAre-86g07F" target="_blank" rel="noreferrer">https://www.python.org/dev/<wbr>peps/pep-0008/</a></li>
+<li>Upload the project, in a well organized way, in a public git repository.</li>
+<li>Add the README file in the root of the repo, comment how get the project up and running.</li>
+<li>Write the code and comments in English</li>
+</ul>
+</div>
+</div>
+
+
+</body></html>

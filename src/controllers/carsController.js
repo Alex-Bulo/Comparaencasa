@@ -4,7 +4,7 @@ const {setCache} = require('../cache/redisCache')
 
 let carsController = {
     
-    getCar: async (req,res,time) => {
+    getCar: async (req,res) => {
         const plate = req.params.plate
         try {
             

@@ -45,7 +45,6 @@ module.exports = (sequelize, DataTypes) => {
 
     const Users = sequelize.define(alias, cols, config)
 
-    //Relaciones
 
     Users.associate = (models) => {
         Users.belongsTo(models.Cars, {
